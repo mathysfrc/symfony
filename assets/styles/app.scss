@@ -1,0 +1,42 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root {
+    --font-title: 'Poppins', shine;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif ;
+}
+
+body, header, .collapse{
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar-brand, .nav-link, .btn, .nav-item {
+    color: red;
+    font-size: 1.5rem;
+}
+
+.navbar, .container-fluid {
+    padding: 0;
+}
+
+h1 {
+    color: transparent;
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+    text-transform: uppercase;
+    font-size: 8rem;
+    -webkit-text-stroke: 4px red;
+}
+
+.navbar {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
