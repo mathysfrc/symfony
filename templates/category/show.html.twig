@@ -1,3 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All programs{% endblock %}
+
+{% block body %}
+
 <h1>{{ category.name }}</h1>
 {% for program in programs %}
 	<div class="media">
@@ -12,3 +18,5 @@
   <a href="{{ path('category_index') }}">
         Retour à la liste des categories
     </a>
+
+{% endblock %}
