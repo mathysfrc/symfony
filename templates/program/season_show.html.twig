@@ -3,17 +3,16 @@
 {% endblock %}
 {% block body %}
 	<h1>
-		{{ programId.title }}
+		{{ program.title }}
 	</h1>
 	<ul>
 		{% for episode in episodes %}
 			<li>
-				{{ episode.title }} : 
-                {{ episode.synopsis }}
+                <a href="{{ path("program_episode_show", { 'program' : program.id, 'season' : season.id, 'episode' : episode.id }) }}">{{ episode.title }}</a> 
 			</li>
 		{% endfor %}
 	</ul>
-	<a href="{{ path("program_show", { id: programId.id }) }}">Voir la fiche</a>
+	<a href="{{ path("program_show", { id: program.id }) }}">Voir la fiche</a>
 </div>
 
 </a>{% endblock %}
