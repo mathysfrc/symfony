@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block title %}All seasons of program
+{% endblock %}
+{% block body %}
+	<h1>
+		{{ programId.title }}
+	</h1>
+	<ul>
+		{% for episode in episodes %}
+			<li>
+				{{ episode.title }} : 
+                {{ episode.synopsis }}
+			</li>
+		{% endfor %}
+	</ul>
+	<a href="{{ path("program_show", { id: programId.id }) }}">Voir la fiche</a>
+</div>
+
+</a>{% endblock %}

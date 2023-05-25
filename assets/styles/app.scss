@@ -16,7 +16,7 @@ body, header, .collapse{
     background-color: rgb(0, 0, 0);
 }
 
-.navbar-brand, .nav-link, .btn, .nav-item {
+.navbar-brand, .nav-link, .btn, .nav-item, .nav-link {
     color: red;
     font-size: 1.5rem;
 }
@@ -39,5 +39,6 @@ h1 {
     margin-top: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    --bs-navbar-active-color: red;
 }
 
