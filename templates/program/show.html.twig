@@ -3,20 +3,20 @@
 {% endblock %}
 {% block body %}
 	<div>
-		<h1>{{ program.title }}</h1>
-		<p>{{ program.country }}</p>
-		<p>{{ program.category.name }}</p>
+		<h1 class='catName'>{{ program.title }}</h1>
+		<p class='mtl'>Pays d'origine de la série : {{ program.country }}</p>
+		<p class='mtl'>Catégorie de la série : {{ program.category.name }}</p>
 	</div>
 	<ul>
 		{% for season in program.seasons %}
 			<li>
-				<p>
+				<p class='mty'>
 					Saison numéro : {{ season.number }}</p>
 				<a href='{{ path("program_season_show", { programId: program.id, seasonId: season.id }) }}'>Voir les épisodes</a>
 			</li>
 		{% endfor %}
 	</ul>
-	<a href="{{ path("program_index", {id: program.id}) }}">
+	<a class='a-role'href="{{ path("program_index", {id: program.id}) }}">
 		Retour à la liste des programmes
 	</a>
 {% endblock %}

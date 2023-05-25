@@ -2,15 +2,15 @@
 {% block title %}All seasons of program
 {% endblock %}
 {% block body %}
-	<h1>
+	<h1 class='catName'>
 		{{ program.title }}
 	</h1>
-<h2> {{ season.number }}</h2>
-<p> {{ episode.number }}</p>
-<p> {{ episode.title }}</p>
-<p> {{ episode.synopsis }}</p>
+<h2 class='mt'> Saison numéro : {{ season.number }}</h2>
+<p class='m'> Episode numéro : {{ episode.number }}</p>
+<p class="w"> {{ episode.title }}</p>
+<p class="mts"> {{ episode.synopsis }}</p>
 
-<a href='{{ path("program_season_show", { programId: program.id, seasonId: season.id }) }}'>Retour</a>
+<a class="a-role" href='{{ path("program_season_show", { programId: program.id, seasonId: season.id }) }}'>Retour</a>
 </div>
 
 </a>{% endblock %}

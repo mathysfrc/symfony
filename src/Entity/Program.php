@@ -17,10 +17,6 @@ class Program
     private ?int $id = null;
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\NotBlank(message: 'Ne me laisse pas tout vide')]
-    #[UniqueEntity(
-        errorPath: 'port',
-        message: 'Ce titre existe déja',
-    )]
     #[Assert\Length(
         max: 255,
         maxMessage: 'La catégorie saisie {{ value }} est trop longue, elle ne devrait pas dépasser {{ limit }} caractères',

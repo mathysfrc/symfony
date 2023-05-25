@@ -4,14 +4,14 @@
 
 {% block body %}
 
-<h1>Category</h1>
+<h1 class="titleCategory">Toutes les catégories :</h1>
 {% for category in categories %}
 	<a href="{{ path("category_show", { categoryName : category.name }) }}">{{ category.name }}</a>
 {% endfor %}
 
-	<a href="{{ path("category_new") }}">Contact</a>
+	<a class='a-role' href="{{ path("category_new") }}">Ajouter une catégorie</a>
 
-    <a href="{{ path('app_index') }}">
+ <a class='a-role' href="{{ path('app_index') }}">
         Retour à l'accueil
 		</a>
 

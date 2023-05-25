@@ -4,18 +4,17 @@
 
 {% block body %}
 
-<h1>{{ category.name }}</h1>
+<h1 class='catName'>{{ category.name }}</h1>
 {% for program in programs %}
 	<div class="media">
 		<div class="media-body">
-			<h1 class="mt-0">{{program.title}}
-			{{ program.id }}</h1>
-			<p>{{ program.synopsis }}</p>
+			<h1 class="mt">{{program.title}}</h1>
+			<p class="mts">{{ program.synopsis }}</p>
 		</div>
 	</div>
 {% endfor %}
 
-  <a href="{{ path('category_index') }}">
+  <a class='a-role'href="{{ path('category_index') }}">
         Retour à la liste des categories
     </a>
 
