@@ -34,13 +34,15 @@ class CategoryController extends AbstractController
         $form->handleRequest($request);
     
         if ($form->isSubmitted()) {
-            $categoryRepository->save($category, true);            
+            $categoryRepository->save($category, true);
+            
+            if ($form->isSubmitted() && $form->isValid()) {
     
             // Redirect to categories list
             $form = $this->createForm(CategoryType::class, $category);
             
             return $this->redirectToRoute('category_index');
-        }
+        }}
     
         // Render the form
         return $this->render('category/new.html.twig', [
